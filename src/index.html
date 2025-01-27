@@ -10,7 +10,18 @@
 
 <body>
   <main>
-    <h1>Vanilla JavaScript App</h1>
+    <h1>HTTP Request Example</h1>
+    <button id="fetchData">Fetch Data from Server</button>
+
+    <script>
+        document.getElementById('fetchData').addEventListener('click', function() {
+            //fetch('http://localhost:7000/api/http_trigger')
+            fetch('https://backend-sample-sugaya.azurewebsites.net/api/http_trigger?')
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
   </main>
 </body>
 
