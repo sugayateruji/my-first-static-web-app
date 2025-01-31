@@ -16,7 +16,8 @@
     <script>
         document.getElementById('fetchData').addEventListener('click', function() {
             //fetch('http://localhost:7000/api/http_trigger')
-            fetch('https://backend-sample-sugaya2.azurewebsites.net/api/http_trigger?')
+            //fetch('https://backend-sample-sugaya2.azurewebsites.net/api/http_trigger?')
+            fetch('https://backend-sample-east.azurewebsites.net/api/http_trigger?')
                 .then(response => response.json())
                 .then(data => console.log(data))
                 .catch(error => console.error('Error:', error));
